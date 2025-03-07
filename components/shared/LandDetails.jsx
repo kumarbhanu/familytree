@@ -5,14 +5,13 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
 const landData = [
-
   {
     location: "Chalya baare",
     land_name: "gadde",
     survey_number: "216/p2",
     owner: "Karikempegowda",
-    acres: "1.31.00.00",
-    id:1
+    acres: "1.31",
+    id: 1,
   },
   {
     location: "Chalya baare",
@@ -20,11 +19,10 @@ const landData = [
     survey_number: "214/1",
     owner: "sannaningegowda",
     acres: "1.00",
-    id:2
+    id: 2,
   },
-
   {
-    id:3,
+    id: 3,
     location: "Chalya baare",
     land_name: "Chalya baare",
     survey_number: "214/2",
@@ -32,7 +30,7 @@ const landData = [
     acres: "1.10",
   },
   {
-    id:4,
+    id: 4,
     location: "Chalya baare",
     land_name: "Chalya baare",
     survey_number: "214/3",
@@ -40,33 +38,31 @@ const landData = [
     acres: "1.01",
   },
   {
-    id:5,
+    id: 5,
     location: "korenahally",
     land_name: "kane seelu",
     survey_number: "61/8",
     owner: "rangegowda",
-    acres: "0.06.08",
+    acres: "0.06",
   },
-
   {
-    id:6,
+    id: 6,
     location: "korenahally",
     land_name: "mallammana thota",
     survey_number: "56/1",
     owner: "sannaningegowda",
-    acres: " 0.21.",
+    acres: "0.21",
   },
   {
-    id:6,
+    id: 7,
     location: "korenahally",
     land_name: "dodda thota",
     survey_number: "57/1",
     owner: "sannaningegowda",
-    acres: "  0.08.",
+    acres: "0.08",
   },
-
   {
-    id:7,
+    id: 8,
     location: "korenahally",
     land_name: "chikkanna hola",
     survey_number: "60/1A",
@@ -74,16 +70,21 @@ const landData = [
     acres: "0.34",
   },
   {
-    id:8,
-    location: "korenahally",
-    land_name: "chikkanna hola",
-    survey_number: "60/1B",
+    id: 10,
+    location: "bindenahally",
+    land_name: "gudi gadde",
+    survey_number: "67",
     owner: "sannakempegowda",
-    acres: "0.13",
-    
+    acres: "0.20",
   },
-
- 
+  {
+    id: 11,
+    location: "bindenahally",
+    land_name: " gadde",
+    survey_number: "92",
+    owner: "sannakempegowda",
+    acres: "0.26",
+  },
 ];
 
 export default function LandList() {
@@ -102,7 +103,8 @@ export default function LandList() {
       land.owner.toLowerCase().includes(search.owner.toLowerCase())
   );
 
-  const totalAcres = filteredData.reduce((sum, land) => sum + land.acres, 0);
+  // Fixing total acres calculation
+  const totalAcres = filteredData.reduce((sum, land) => sum + (parseFloat(land.acres) || 0), 0).toFixed(2);
 
   return (
     <div className="container mx-auto p-4">
