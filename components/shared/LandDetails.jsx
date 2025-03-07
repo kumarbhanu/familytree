@@ -5,27 +5,85 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
 const landData = [
+
   {
-    location: "Korenahally",
-    land_name: "Chikkanhola",
-    survey_number: "60A",
-    owner: "Sannakempegowda",
-    acres: 5,
+    location: "Chalya baare",
+    land_name: "gadde",
+    survey_number: "216/p2",
+    owner: "Karikempegowda",
+    acres: "1.31.00.00",
+    id:1
   },
   {
-    location: "Chalya Baare",
-    land_name: "Kane Seelu",
-    survey_number: "61",
-    owner: "Sanna Ningegowda",
-    acres: 3,
+    location: "Chalya baare",
+    land_name: "Chalya baare",
+    survey_number: "214/1",
+    owner: "sannaningegowda",
+    acres: "1.00",
+    id:2
+  },
+
+  {
+    id:3,
+    location: "Chalya baare",
+    land_name: "Chalya baare",
+    survey_number: "214/2",
+    owner: "gundegowda",
+    acres: "1.10",
   },
   {
-    location: "Bidenahally",
-    land_name: "Gadde Gudi",
-    survey_number: "200",
-    owner: "Sanna Ningegowda",
-    acres: 4,
+    id:4,
+    location: "Chalya baare",
+    land_name: "Chalya baare",
+    survey_number: "214/3",
+    owner: "sannaningegowda",
+    acres: "1.01",
   },
+  {
+    id:5,
+    location: "korenahally",
+    land_name: "kane seelu",
+    survey_number: "61/8",
+    owner: "rangegowda",
+    acres: "0.06.08",
+  },
+
+  {
+    id:6,
+    location: "korenahally",
+    land_name: "mallammana thota",
+    survey_number: "56/1",
+    owner: "sannaningegowda",
+    acres: " 0.21.",
+  },
+  {
+    id:6,
+    location: "korenahally",
+    land_name: "dodda thota",
+    survey_number: "57/1",
+    owner: "sannaningegowda",
+    acres: "  0.08.",
+  },
+
+  {
+    id:7,
+    location: "korenahally",
+    land_name: "chikkanna hola",
+    survey_number: "60/1A",
+    owner: "-",
+    acres: "0.34",
+  },
+  {
+    id:8,
+    location: "korenahally",
+    land_name: "chikkanna hola",
+    survey_number: "60/1B",
+    owner: "sannakempegowda",
+    acres: "0.13",
+    
+  },
+
+ 
 ];
 
 export default function LandList() {
