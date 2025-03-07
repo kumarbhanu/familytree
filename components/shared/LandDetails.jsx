@@ -39,7 +39,18 @@ export default function LandList() {
       (!search.status || land.status === search.status)
   );
 
-  const totalAcres = filteredData.reduce((sum, land) => sum + (parseFloat(land.acres) || 0), 0).toFixed(2);
+  // Calculate total acres based on status
+  const registeredTotal = filteredData
+    .filter((land) => land.status === "Registered")
+    .reduce((sum, land) => sum + (parseFloat(land.acres) || 0), 0)
+    .toFixed(2);
+
+  const pendingTotal = filteredData
+    .filter((land) => land.status === "Pending")
+    .reduce((sum, land) => sum + (parseFloat(land.acres) || 0), 0)
+    .toFixed(2);
+
+  const totalAcres = (parseFloat(registeredTotal) + parseFloat(pendingTotal)).toFixed(2);
 
   return (
     <div className="container mx-auto p-4">
@@ -111,12 +122,14 @@ export default function LandList() {
       </div>
 
       <h2 className="text-xl font-bold mb-4">Total Acres: {totalAcres}</h2>
+      <h3 className="text-lg font-semibold text-green-600">Registered Acres: {registeredTotal}</h3>
+      <h3 className="text-lg font-semibold text-red-600">Pending Acres: {pendingTotal}</h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         {filteredData.map((land, index) => (
           <Card key={index} className="shadow-lg">
             <CardHeader>
-              <CardTitle>{land.land_name}</CardTitle>
+              <CardTitle className="text-2xl text-teal-600">{land.land_name}</CardTitle>
               <Badge variant={land.status === "Registered" ? "default" : "destructive"}>
                 {land.status}
               </Badge>
@@ -126,6 +139,7 @@ export default function LandList() {
               <p><strong>Survey No:</strong> {land.survey_number}</p>
               <p><strong>Owner:</strong> {land.owner}</p>
               <p><strong>Acres:</strong> {land.acres}</p>
+          
             </CardContent>
           </Card>
         ))}
