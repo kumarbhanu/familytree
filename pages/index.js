@@ -6,7 +6,7 @@ import LandDetails from "@/components/shared/LandDetails";
 import { familyData } from "@/data/familyData";
 
 export default function Home() {
-  const [activeComponent, setActiveComponent] = useState("FamilyTree");
+  const [activeComponent, setActiveComponent] = useState("LandDetails");
   const [isSidebarOpen, setSidebarOpen] = useState(true);
 
   return (

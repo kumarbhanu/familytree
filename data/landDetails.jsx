@@ -1,44 +1,109 @@
-const data={
-    "lands": [
-      {
-        "location": "Korenahally",
-        "properties": [
-          {
-            "land_name": "Chikkanhola",
-            "survey_number": "60A",
-            "owner": "Sannakempegowda",
-            "relation": "Self",
-            "id": 1,
-            "acres": null
-          }
-        ]
-      },
-      {
-        "location": "Chalya Baare",
-        "properties": [
-          {
-            "land_name": "Kane Seelu",
-            "survey_number": "61",
-            "owner": "Sanna Ningegowda",
-            "relation": "Self",
-            "id": 2,
-            "acres": null
-          }
-        ]
-      },
-      {
-        "location": "Bidenahally",
-        "properties": [
-          {
-            "land_name": "Gadde Gudi",
-            "survey_number": "200",
-            "owner": "Sanna Ningegowda",
-            "relation": "Self",
-            "id": 3,
-            "acres": null
-          }
-        ]
-      }
-    ]
-  }
-  
+export const landData = [
+  {
+    location: "Chalya baare",
+    land_name: "gadde",
+    survey_number: "216/p2",
+    owner: "Karikempegowda",
+    acres: "1.31",
+    id: 1,
+    status: "Registered",
+  },
+  {
+    location: "Chalya baare",
+    land_name: "Chalya baare",
+    pdfFileName: "214-1",
+    survey_number: "214/1",
+    owner: "sannaningegowda",
+    acres: "1.00",
+    id: 2,
+    status: "Pending",
+  },
+  {
+    id: 3,
+    pdfFileName: "214-2",
+    location: "Chalya baare",
+    land_name: "Chalya baare",
+    survey_number: "214/2",
+    owner: "gundegowda",
+    acres: "1.10",
+    status: "Pending",
+  },
+  {
+    id: 4,
+    pdfFileName: "214-3",
+    location: "Chalya baare",
+    land_name: "Chalya baare",
+    survey_number: "214/3",
+    owner: "sannaningegowda",
+    acres: "1.01",
+    status: "Pending",
+  },
+  {
+    id: 5,
+    location: "korenahally",
+    land_name: "kane seelu",
+    survey_number: "61/8",
+    owner: "Rangegowda",
+    acres: "0.06",
+    status: "Registered",
+     pdfFileName:"60-8"
+  },
+  {
+    id: 6,
+    location: "korenahally",
+    land_name: "mallammana thota",
+    survey_number: "56/1",
+    owner: "sannaningegowda",
+    acres: "0.21",
+    status: "Pending",
+     pdfFileName:"56-1"
+  },
+  {
+    id: 7,
+    location: "korenahally",
+    land_name: "dodda thota",
+    survey_number: "57/1",
+    owner: "sannaningegowda",
+    acres: "0.08",
+    status: "Pending",
+      pdfFileName:"57-1"
+  },
+  {
+    id: 8,
+    location: "korenahally",
+    land_name: "chikkanna hola",
+    survey_number: "60/1A",
+    owner: "-",
+    acres: "0.34",
+    status: "Pending",
+      pdfFileName:"60-1A"
+  },
+  {
+    id: 10,
+    location: "bindenahally",
+    land_name: "gudi gadde",
+    survey_number: "67",
+    owner: "Sannakempegowda",
+    acres: "0.20",
+    status: "Registered",
+  },
+  {
+    id: 11,
+    location: "bindenahally",
+    land_name: "gadde",
+    survey_number: "92",
+    owner: "Sannakempegowda",
+    acres: "0.26",
+    status: "Registered",
+  },
+  {
+    id: 12,
+    location: "korenahally",
+    land_name: "chikkanna hola",
+    survey_number: "60/1B",
+    owner: "-",
+    acres: "0.13",
+    status: "Registered",
+    pdfFileName:"60-1B"
+  },
+];
